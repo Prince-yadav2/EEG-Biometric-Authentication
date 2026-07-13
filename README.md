@@ -64,7 +64,7 @@ Authentication
 
 ### Preprocessing
 
-- EEG Epoching
+- EEG Epoch Segmentation
 - Z-score Normalization
 - Butterworth Bandpass Filtering (8–30 Hz)
 
@@ -123,23 +123,6 @@ Dataset Information:
 - Sampling Frequency: 160 Hz
 - Multiple Subjects
 - Multiple Recording Sessions
-
-> **Note:** The dataset is not included in this repository. Please download it separately and organize it in the following structure.
-
-```
-data/
-│
-├── S001/
-│   ├── *.edf
-│
-├── S002/
-│   ├── *.edf
-│
-├── S003/
-│   ├── *.edf
-│
-└── ...
-```
 
 ---
 
