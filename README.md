@@ -96,7 +96,7 @@ The proposed CNN consists of:
 - Dropout Layer
 - Softmax Output Layer
 
-![CNN Architecture](images/cnn_architecture.png)
+![CNN Architecture](images/cnn_architectur.png)
 
 ---
 
