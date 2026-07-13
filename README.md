@@ -1,0 +1,250 @@
+# EEG-Based Biometric Authentication using Deep Learning
+
+## Overview
+
+This project presents a **EEG Biometric Authentication System** that utilizes **Digital Signal Processing (DSP)** and **Deep Learning (CNN)** for secure user authentication. The system processes Electroencephalography (EEG) signals, extracts discriminative time-frequency features using the **Continuous Wavelet Transform (CWT)** and generate Scalogram images, and classifies registered users using a **Convolutional Neural Network (CNN)**. It also supports **unknown user rejection** through a majority-voting authentication mechanism.
+
+---
+
+## Features
+
+- Multi-user EEG biometric authentication
+- EEG preprocessing using DSP techniques
+- Bandpass filtering (8–30 Hz Butterworth IIR Filter)
+- Continuous Wavelet Transform (CWT)
+- Scalogram-based feature extraction
+- Patch-based image generation (avoids information loss)
+- Multi-channel CNN classification
+- Unknown user rejection
+- GUI-based authentication system
+- Performance evaluation using standard metrics
+
+---
+
+## Project Workflow
+
+```
+EEG Signal
+     │
+     ▼
+Epoch Segmentation
+     │
+     ▼
+Normalization
+     │
+     ▼
+Bandpass Filter (8–30 Hz)
+     │
+     ▼
+Wavelet Transform (CWT)
+     │
+     ▼
+Scalogram Generation
+     │
+     ▼
+Patch Extraction
+     │
+     ▼
+Multi-Channel Image Stacking
+     │
+     ▼
+CNN Classification
+     │
+     ▼
+Majority Voting
+     │
+     ▼
+Authentication
+(Authorized / Unauthorized)
+```
+![Workflow](images/workflow.png)
+
+---
+
+## Digital Signal Processing Pipeline
+
+### Preprocessing
+
+- EEG Epoch Segmentation
+- Z-score Normalization
+- Butterworth Bandpass Filtering (8–30 Hz)
+
+### Feature Extraction
+
+- Fast Fourier Transform (FFT)
+- Spectrogram (STFT)
+- Continuous Wavelet Transform (CWT)
+- Scalogram Generation
+
+After comparative analysis, **Wavelet Transform with Scalogram representation** was selected because it preserves both time and frequency information effectively.
+
+![Wavelet](images/Wavelet_Transform.png)
+---
+
+## Deep Learning Architecture
+
+The proposed CNN consists of:
+
+- Input Layer
+- Convolution Layer (3×3)
+- ReLU Activation
+- Max Pooling Layer
+- Convolution Layer
+- Max Pooling Layer
+- Flatten Layer
+- Fully Connected Layer
+- Dropout Layer
+- Softmax Output Layer
+
+![CNN Architecture](images/cnn_architectur.png)
+
+---
+
+## Authentication Strategy
+
+The trained CNN predicts the class of each extracted EEG patch.
+
+The final authentication decision is obtained using **majority voting**:
+
+- If the majority of patches belong to a registered user:
+  - **Authorized**
+- Otherwise:
+  - **Unauthorized**
+
+---
+
+## Dataset
+
+**Dataset:** EEG Motor Movement/Imagery Dataset
+
+Dataset Format:
+
+- EDF (European Data Format)
+
+Dataset Information:
+
+- 64 EEG Channels
+- Sampling Frequency: 160 Hz
+- Multiple Subjects
+- Multiple Recording Sessions
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Prince-yadav2/EEG-Biometric-Authentication.git
+```
+
+Go to the project directory:
+
+```bash
+cd EEG-Biometric-Authentication
+```
+
+Install the required libraries:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Running the Project
+
+Run the GUI:
+
+```bash
+python GUI_Multi_User_Authentication.py
+```
+
+The GUI allows you to:
+
+- Select an EEG (.edf) file
+- Authenticate the user
+- Display the authentication result
+
+---
+
+## Performance Metrics
+
+The proposed system is evaluated using:
+
+- Accuracy
+- Precision
+- Recall (Sensitivity)
+- Specificity
+- F1-Score
+- Matthews Correlation Coefficient (MCC)
+- AUC-ROC
+- False Acceptance Rate (FAR)
+- False Rejection Rate (FRR)
+- Confusion Matrix
+
+| Metric | Value |
+|---------|-------|
+| Accuracy | 86.88% |
+| Precision | 79.74% |
+| Recall | 76.40% |
+| Specificity | 95.97% |
+| F1 Score | 77.57% |
+| MCC | 76.18 % |
+| AUC-ROC | 97.00 % |
+| FAR | 04.03 % |
+| FRR | 23.59 % |
+
+---
+
+## Results
+
+### Filter Comparison
+
+![Filter Comparison](images/Filter_comparison.png)
+
+---
+
+### User-Level Confusion Matrix
+
+![Confusion Matrix](images/Confusion_Matrix.png)
+
+---
+
+### GUI
+
+![GUI](images/gui.png)
+
+---
+
+## Future Work
+
+- Improve unknown-user rejection
+- Optimize CNN architecture
+- Real-time EEG acquisition
+- Hardware implementation using embedded systems
+- Deploy the authentication system as a standalone desktop application
+
+---
+
+## Author
+
+**Prince Yadav**
+
+Department of Electrical Engineering
+
+---
+
+## Acknowledgements
+
+- PhysioNet EEG Motor Movement/Imagery Dataset
+- MNE-Python
+- TensorFlow / Keras
+- Scikit-learn
+- PyWavelets
+
+---
+
+## License
+
+This project is intended for educational and research purposes.
