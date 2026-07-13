@@ -1,0 +1,10 @@
+tensorflow
+numpy
+scipy
+mne
+PyWavelets
+opencv-python
+matplotlib
+seaborn
+scikit-learn
+Pillow
