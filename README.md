@@ -57,6 +57,7 @@ Majority Voting
 Authentication
 (Authorized / Unauthorized)
 ```
+![Workflow](images/workflow.png)
 
 ---
 
@@ -77,6 +78,7 @@ Authentication
 
 After comparative analysis, **Wavelet Transform with Scalogram representation** was selected because it preserves both time and frequency information effectively.
 
+![Wavelet](images/Wavelet_Transform.png)
 ---
 
 ## Deep Learning Architecture
@@ -93,6 +95,8 @@ The proposed CNN consists of:
 - Fully Connected Layer
 - Dropout Layer
 - Softmax Output Layer
+
+![CNN Architecture](images/cnn_architecture.png)
 
 ---
 
@@ -197,25 +201,19 @@ The proposed system is evaluated using:
 
 ### Filter Comparison
 
-_Insert your filter comparison figure here._
-
----
-
-### Feature Extraction
-
-_Insert FFT, Spectrogram, Wavelet, and Scalogram figures here._
+![Filter Comparison](images/Filter_comparison.png)
 
 ---
 
 ### User-Level Confusion Matrix
 
-_Insert your confusion matrix here._
+![Confusion Matrix](images/Confusion_Matrix.png)
 
 ---
 
 ### GUI
 
-_Insert screenshots of the GUI here._
+![GUI](images/gui.png)
 
 ---
 
