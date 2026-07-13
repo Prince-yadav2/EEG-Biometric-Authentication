@@ -4,6 +4,8 @@
 
 This project presents a **EEG Biometric Authentication System** that utilizes **Digital Signal Processing (DSP)** and **Deep Learning (CNN)** for secure user authentication. The system processes Electroencephalography (EEG) signals, extracts discriminative time-frequency features using the **Continuous Wavelet Transform (CWT)** and generate Scalogram images, and classifies registered users using a **Convolutional Neural Network (CNN)**. It also supports **unknown user rejection** through a majority-voting authentication mechanism.
 
+---
+
 ## Features
 
 - Multi-user EEG biometric authentication
