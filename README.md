@@ -1,4 +1,4 @@
-# EEG-Based Multi-User Biometric Authentication using Deep Learning
+# EEG-Based Biometric Authentication using Deep Learning
 
 ## Overview
 
