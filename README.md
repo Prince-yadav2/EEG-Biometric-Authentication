@@ -27,7 +27,7 @@ This project presents a **EEG Biometric Authentication System** that utilizes **
 EEG Signal
      │
      ▼
-Epoching
+Epoch Segmentation
      │
      ▼
 Normalization
