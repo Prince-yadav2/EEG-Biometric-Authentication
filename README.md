@@ -126,27 +126,6 @@ Dataset Information:
 
 ---
 
-## Repository Structure
-
-```
-EEG-Biometric-Authentication/
-│
-├── data/
-├── test_data/
-│
-├── GUI_Multi_User_Authentication.py
-├── Multi_User_Biometric_Authentication.ipynb
-├── DSP_filter_and_feature_extraction_technique.ipynb
-├── Single_User_BA.py
-├── Single_User_Biometric_Authentication.ipynb
-│
-├── requirements.txt
-├── README.md
-└── .gitignore
-```
-
----
-
 ## Installation
 
 Clone the repository:
@@ -194,27 +173,23 @@ The proposed system is evaluated using:
 - Recall (Sensitivity)
 - Specificity
 - F1-Score
-- AUC-ROC
 - Matthews Correlation Coefficient (MCC)
+- AUC-ROC
 - False Acceptance Rate (FAR)
 - False Rejection Rate (FRR)
 - Confusion Matrix
-- Error Rate
-- Latency
-
-> **Note:** Replace the values below with your experimental results.
 
 | Metric | Value |
 |---------|-------|
-| Accuracy | XX.XX% |
-| Precision | XX.XX% |
-| Recall | XX.XX% |
-| Specificity | XX.XX% |
-| F1 Score | XX.XX% |
-| MCC | XX.XX |
-| FAR | XX.XX |
-| FRR | XX.XX |
-| Latency | XX ms |
+| Accuracy | 86.88% |
+| Precision | 79.74% |
+| Recall | 76.40% |
+| Specificity | 95.97% |
+| F1 Score | 77.57% |
+| MCC | 76.18 % |
+| AUC-ROC | 97.00 % |
+| FAR | 04.03 % |
+| FRR | 23.59 % |
 
 ---
 
@@ -246,7 +221,6 @@ _Insert screenshots of the GUI here._
 
 ## Future Work
 
-- Increase the number of registered users
 - Improve unknown-user rejection
 - Optimize CNN architecture
 - Real-time EEG acquisition
